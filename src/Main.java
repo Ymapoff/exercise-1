@@ -1,13 +1,10 @@
-import java.util.Arrays;
-
 public class Main {
+
     public static void main(String[] args) {
-        int billet = 32400; //стоимость билета
+        BonusMilesService service = new BonusMilesService();
 
-        int rub = 20; // за 1 милю
-
-        {;
-            System.out.println((billet / rub) + "колличество миль");
-        }
-    }
+        int price = 32400;
+        int miles = service.calculate(price);
+        System.out.println(miles);
+    }   
 }
